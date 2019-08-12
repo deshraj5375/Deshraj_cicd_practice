@@ -1,7 +1,7 @@
 node {
 
 stage 'Checkout'
-step([$class: 'GitSCM',branches: [[name: '$BRANCH']],url: 'https://github.com/deshraj5375/deshraj_cicd_practice.git'])
+checkout([$class: 'GitSCM', branches: [[name: '$BRANCH']], url: 'https://github.com/deshraj5375/deshraj_cicd_practice.git'])
 def mvnHome = tool 'M3'
 
 stage 'Build'
