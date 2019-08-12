@@ -1,7 +1,7 @@
 node {
 
 stage 'Checkout'
-git url: ''
+git url: 'https://github.com/deshraj5375/deshraj_cicd_practice.git'
 def mvnHome = tool 'M3'
 
 stage 'Build'
