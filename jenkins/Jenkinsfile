@@ -1,8 +1,7 @@
 node {
 
 stage 'Checkout'
-sh "git clone 'https://github.com/deshraj5375/deshraj_cicd_practice.git'"
-branches: [[name: '$branch']]
+step([$class: 'GitSCM',branches: [[name: '$BRANCH']],url: 'https://github.com/deshraj5375/deshraj_cicd_practice.git'])
 def mvnHome = tool 'M3'
 
 stage 'Build'
