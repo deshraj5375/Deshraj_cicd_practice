@@ -2,6 +2,7 @@ node {
 
 stage 'Checkout'
 sh "git clone 'https://github.com/deshraj5375/deshraj_cicd_practice.git'"
+branches: [[name: '$branch']]
 def mvnHome = tool 'M3'
 
 stage 'Build'
