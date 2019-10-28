@@ -7,7 +7,13 @@ stage('chekout')
 
 	checkout scm
 	sh 'ls -ltr'
-	sh 'git status'
+	sh '''
+		git status
+		echo "my name is desh" > abc.txt
+		git add abc.txt
+		git commit -m "adding abc.txt"
+        git push -u origin master
+		'''
 
 }
 
