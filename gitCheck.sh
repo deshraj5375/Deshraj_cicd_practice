@@ -14,7 +14,7 @@ git remote -v
 git checkout master
 echo "My name is Deshraj" >> abc
 git add abc
-git commit -m "Adding abc file
+git commit -m "Adding abc file"
 git push 
 
 
