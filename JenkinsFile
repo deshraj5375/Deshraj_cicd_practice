@@ -5,7 +5,10 @@ stage('chekout')
 
 {
 
-checkout scm
+	checkout scm
+	sh 'ls -ltr'
+	sh 'git status'
+
 }
 
 }
