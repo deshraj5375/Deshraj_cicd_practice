@@ -12,6 +12,7 @@ git config --global user.name "Deshraj Sharma"
 git  config --global user.email "deshrajsharma@gmail.com"
 git remote -v
 git checkout master
+git pull --rebase
 echo "My name is Deshraj" >> abc
 git add abc
 git commit -m "Adding abc file"
