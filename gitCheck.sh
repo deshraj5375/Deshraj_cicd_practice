@@ -10,6 +10,8 @@ fi
 echo "*********************Git is installed******************** "
 whoami
 
+git remote set-url origin git@github.com:deshraj5375/deshraj_cicd_practice.git
+
 git remote -v
 
 echo "*****************Checking out to master branch******************"
