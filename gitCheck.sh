@@ -9,6 +9,8 @@ fi
 
 echo "Git is installed "
 echo "setting user.name and user.email"
+whoami
+
 git config --global user.name "Deshraj Sharma"
 git  config --global user.email "deshrajsharma@gmail.com"
 git remote -v
