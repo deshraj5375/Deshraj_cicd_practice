@@ -6,7 +6,7 @@ node
        checkout scm  
        sh '''
 	   ls -ltr
-      //git clone https://github.com/deshraj5375/jenkins_job_javaMavenproject.git
+      #git clone https://github.com/deshraj5375/jenkins_job_javaMavenproject.git
 
 	''' 
 	
