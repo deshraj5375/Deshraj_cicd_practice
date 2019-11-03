@@ -3,13 +3,10 @@ node
 
    stage('Checkout scm')
    {
-      echo "Welcome to jenkins file"
-	  first()
-   }
+       checkout scm  
+       sh 'ls -ltr'   
 
-   def first()
-   {
-      echo "This is inside first"
-   }
+	}
 
+  
 }
