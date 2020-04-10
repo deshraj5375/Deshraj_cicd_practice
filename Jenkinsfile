@@ -1,5 +1,5 @@
 
-scm checkout
+checkout scm
 node
 {
 sh 'ls -ltr'
