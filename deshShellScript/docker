@@ -7,3 +7,6 @@ yum install -y https://download.docker.com/linux/centos/7/x86_64/stable/Packages
 docker compose:
 https://docs.docker.com/compose/install/
 =============
+docker on amazon machine:
+https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
+=============
