@@ -10,3 +10,24 @@ https://docs.docker.com/compose/install/
 docker on amazon machine:
 https://docs.aws.amazon.com/AmazonECS/latest/developerguide/docker-basics.html
 =============
+
+docker is not coming up. 
+error:
+[ec2-user@ip-172-31-38-110 jenkins-data]$ service docker start
+Redirecting to /bin/systemctl start docker.service
+Failed to start docker.service: The name org.freedesktop.PolicyKit1 was not provided by any .service files
+See system logs and 'systemctl status docker.service' for details.
+[ec2-user@ip-172-31-38-110 jenkins-data]$
+
+check exact error with dockerd command
+
+[ec2-user@ip-172-31-38-110 jenkins-data]$ dockerd
+INFO[2020-04-23T01:29:06.457006824Z] Starting up
+dockerd needs to be started with root. To see how to run dockerd in rootless mode with unprivileged user, see the documentation
+[ec2-user@ip-172-31-38-110 jenkins-data]$
+[ec2-user@ip-172-31-38-110 jenkins-data]$
+[ec2-user@ip-172-31-38-110 jenkins-data]$ sudo service docker start
+Redirecting to /bin/systemctl start docker.service
+[ec2-user@ip-172-31-38-110 jenkins-data]$
+
+==========================
