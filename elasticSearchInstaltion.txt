@@ -1,0 +1,68 @@
+ubuntu machine:
+
+can follow from here 
+https://www.elastic.co/guide/en/elasticsearch/reference/current/deb.html
+
+or
+
+wget -qO - https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+apt-get install apt-transport-https
+
+echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.list
+
+apt-get update && sudo apt-get install elasticsearch
+
+============
+
+configure now.
+change in /etc/elasticsearch/elasticsearch.yml
+
+node.name: node-1
+network.host: 0.0.0.0
+discovery.seed_hosts: ["127.0.0.1"]
+cluster.initial_master_nodes: ["node-1"]
+
+=================
+/bin/systemctl daemon-reload 
+systemctl enable elasticsearch.service
+systemctl start elasticsearch.service
+
+when you start you may face issue about memory problem. 
+
+resolutions:
+change Elasticsearch JVM settings /etc/elasticsearch/jvm.options and lower the values of the following parameters: -Xms512m -Xmx512m
+
+=================
+for test: 
+
+curl -XGET 127.0.0.1:9200
+=========
+
+wget http://media.sundog-soft.com/es7/shakes-mapping.json
+=======
+
+Basic Concepts:
+
+documents: It is something which you search for. Unique id and type. e.g a raw
+Indices : It is collection of doucments. eg. table
+Inverted Index:  
+TF-IDF(Term frequency): 
+
+
+=================
+sample data can be captured from https://grouplens.org/datasets/movielens/
+
+http://files.grouplens.org/datasets/movielens/ml-latest-small.zip
+
+/usr/bin/curl -H 'Content-Type: application/json' -XPUT 127.0.0.1:9200/movies/_doc/109487 -d'
+{"genre":["IMAX","Sci-fi"],
+ "title":"interseller",
+ "year":2020
+}'
+
+=================
+
+
+
+
